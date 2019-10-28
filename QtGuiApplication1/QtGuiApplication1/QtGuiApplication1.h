@@ -15,7 +15,7 @@ public:
 	QtGuiApplication1(QWidget *parent = Q_NULLPTR);
 
 private:
-	Ui::QtGuiApplication1 ui;
+	Ui::QtGuiApplication1Class ui;
 	LDE<string> users;
 
 	void init() {

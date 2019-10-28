@@ -26,7 +26,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_QtGuiApplication1
+class Ui_QtGuiApplication1Class
 {
 public:
     QWidget *centralWidget;
@@ -47,13 +47,13 @@ public:
     QMenu *menuTeste;
     QMenu *menuSobre;
 
-    void setupUi(QMainWindow *QtGuiApplication1)
+    void setupUi(QMainWindow *QtGuiApplication1Class)
     {
-        if (QtGuiApplication1->objectName().isEmpty())
-            QtGuiApplication1->setObjectName(QString::fromUtf8("QtGuiApplication1"));
-        QtGuiApplication1->setWindowModality(Qt::NonModal);
-        QtGuiApplication1->resize(835, 345);
-        centralWidget = new QWidget(QtGuiApplication1);
+        if (QtGuiApplication1Class->objectName().isEmpty())
+            QtGuiApplication1Class->setObjectName(QString::fromUtf8("QtGuiApplication1Class"));
+        QtGuiApplication1Class->setWindowModality(Qt::NonModal);
+        QtGuiApplication1Class->resize(835, 345);
+        centralWidget = new QWidget(QtGuiApplication1Class);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         formLayoutWidget = new QWidget(centralWidget);
         formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
@@ -191,46 +191,46 @@ public:
 
         formLayout->setItem(5, QFormLayout::FieldRole, horizontalSpacer_2);
 
-        QtGuiApplication1->setCentralWidget(centralWidget);
-        mainToolBar = new QToolBar(QtGuiApplication1);
+        QtGuiApplication1Class->setCentralWidget(centralWidget);
+        mainToolBar = new QToolBar(QtGuiApplication1Class);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        QtGuiApplication1->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(QtGuiApplication1);
+        QtGuiApplication1Class->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        statusBar = new QStatusBar(QtGuiApplication1Class);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
-        QtGuiApplication1->setStatusBar(statusBar);
-        menuBar = new QMenuBar(QtGuiApplication1);
+        QtGuiApplication1Class->setStatusBar(statusBar);
+        menuBar = new QMenuBar(QtGuiApplication1Class);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 835, 21));
         menuTeste = new QMenu(menuBar);
         menuTeste->setObjectName(QString::fromUtf8("menuTeste"));
         menuSobre = new QMenu(menuBar);
         menuSobre->setObjectName(QString::fromUtf8("menuSobre"));
-        QtGuiApplication1->setMenuBar(menuBar);
+        QtGuiApplication1Class->setMenuBar(menuBar);
 
         menuBar->addAction(menuTeste->menuAction());
         menuBar->addAction(menuSobre->menuAction());
 
-        retranslateUi(QtGuiApplication1);
+        retranslateUi(QtGuiApplication1Class);
 
-        QMetaObject::connectSlotsByName(QtGuiApplication1);
+        QMetaObject::connectSlotsByName(QtGuiApplication1Class);
     } // setupUi
 
-    void retranslateUi(QMainWindow *QtGuiApplication1)
+    void retranslateUi(QMainWindow *QtGuiApplication1Class)
     {
-        QtGuiApplication1->setWindowTitle(QApplication::translate("QtGuiApplication1", "Login", nullptr));
-        label_2->setText(QApplication::translate("QtGuiApplication1", "Usu\303\241rio", nullptr));
-        label_3->setText(QApplication::translate("QtGuiApplication1", "Senha", nullptr));
-        botaoLogin->setText(QApplication::translate("QtGuiApplication1", "Entrar", nullptr));
+        QtGuiApplication1Class->setWindowTitle(QApplication::translate("QtGuiApplication1Class", "Control", nullptr));
+        label_2->setText(QApplication::translate("QtGuiApplication1Class", "Usu\303\241rio", nullptr));
+        label_3->setText(QApplication::translate("QtGuiApplication1Class", "Senha", nullptr));
+        botaoLogin->setText(QApplication::translate("QtGuiApplication1Class", "Entrar", nullptr));
         label_4->setText(QString());
-        label->setText(QApplication::translate("QtGuiApplication1", "Login", nullptr));
-        menuTeste->setTitle(QApplication::translate("QtGuiApplication1", "Home", nullptr));
-        menuSobre->setTitle(QApplication::translate("QtGuiApplication1", "Sobre", nullptr));
+        label->setText(QApplication::translate("QtGuiApplication1Class", "Login", nullptr));
+        menuTeste->setTitle(QApplication::translate("QtGuiApplication1Class", "Home", nullptr));
+        menuSobre->setTitle(QApplication::translate("QtGuiApplication1Class", "Sobre", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class QtGuiApplication1: public Ui_QtGuiApplication1 {};
+    class QtGuiApplication1Class: public Ui_QtGuiApplication1Class {};
 } // namespace Ui
 
 QT_END_NAMESPACE

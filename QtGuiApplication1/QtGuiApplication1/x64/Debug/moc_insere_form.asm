@@ -200,7 +200,7 @@ xdata	ENDS
 ;	COMDAT ??__E?staticMetaObject@insere_form@@2UQMetaObject@@B@@YAXXZ
 text$di	SEGMENT
 ??__E?staticMetaObject@insere_form@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'insere_form::staticMetaObject'', COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 80
 	mov	rax, QWORD PTR __imp_?staticMetaObject@QDialog@@2UQMetaObject@@B
 	mov	QWORD PTR ?staticMetaObject@insere_form@@2UQMetaObject@@B, rax
@@ -229,7 +229,7 @@ _c$ = 72
 _id$ = 80
 _a$ = 88
 ?qt_static_metacall@insere_form@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; insere_form::qt_static_metacall
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 67
 $LN8:
 	mov	QWORD PTR [rsp+32], r9
@@ -267,7 +267,7 @@ _c$ = 56
 _id$ = 64
 _a$ = 72
 ?qt_metacall@insere_form@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; insere_form::qt_metacall
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 103
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
@@ -340,7 +340,7 @@ _TEXT	SEGMENT
 this$ = 48
 _clname$ = 56
 ?qt_metacast@insere_form@@UEAAPEAXPEBD@Z PROC		; insere_form::qt_metacast
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 95
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
@@ -377,7 +377,7 @@ _TEXT	SEGMENT
 tv82 = 32
 this$ = 64
 ?metaObject@insere_form@@UEBAPEBUQMetaObject@@XZ PROC	; insere_form::metaObject
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 90
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
@@ -428,7 +428,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 120
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
@@ -440,7 +440,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_insere_form.cpp
 ; Line 120
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0

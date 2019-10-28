@@ -2154,7 +2154,7 @@ _TEXT	ENDS
 ;	COMDAT ??__E?staticMetaObject@menuPrincipal@@2UQMetaObject@@B@@YAXXZ
 text$di	SEGMENT
 ??__E?staticMetaObject@menuPrincipal@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'menuPrincipal::staticMetaObject'', COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 109
 	mov	rax, QWORD PTR __imp_?staticMetaObject@QDialog@@2UQMetaObject@@B
 	mov	QWORD PTR ?staticMetaObject@menuPrincipal@@2UQMetaObject@@B, rax
@@ -2183,7 +2183,7 @@ $T2 = 48
 this$ = 128
 p$ = 136
 ?fill_hash@menuPrincipal@@QEAAXVProduto@@@Z PROC	; menuPrincipal::fill_hash, COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\menuprincipal.h
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\menuprincipal.h
 ; Line 29
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
@@ -2260,7 +2260,7 @@ _c$ = 152
 _id$ = 160
 _a$ = 168
 ?qt_static_metacall@menuPrincipal@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; menuPrincipal::qt_static_metacall
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 91
 $LN16:
 	mov	QWORD PTR [rsp+32], r9
@@ -2349,7 +2349,7 @@ _c$ = 56
 _id$ = 64
 _a$ = 72
 ?qt_metacall@menuPrincipal@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; menuPrincipal::qt_metacall
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 132
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
@@ -2422,7 +2422,7 @@ _TEXT	SEGMENT
 this$ = 48
 _clname$ = 56
 ?qt_metacast@menuPrincipal@@UEAAPEAXPEBD@Z PROC		; menuPrincipal::qt_metacast
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 124
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
@@ -2459,7 +2459,7 @@ _TEXT	SEGMENT
 tv82 = 32
 this$ = 64
 ?metaObject@menuPrincipal@@UEBAPEBUQMetaObject@@XZ PROC	; menuPrincipal::metaObject
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 119
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
@@ -3963,7 +3963,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 149
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
@@ -3975,7 +3975,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
-; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
+; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_menuprincipal.cpp
 ; Line 149
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0

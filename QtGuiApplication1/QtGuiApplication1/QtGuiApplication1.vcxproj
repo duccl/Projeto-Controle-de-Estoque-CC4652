@@ -113,6 +113,7 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="insere_form.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menuprincipal.cpp" />
     <ClCompile Include="QtGuiApplication1.cpp" />
@@ -121,6 +122,7 @@
     <QtMoc Include="QtGuiApplication1.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="insere_form.ui" />
     <QtUic Include="menuprincipal.ui" />
     <QtUic Include="QtGuiApplication1.ui" />
   </ItemGroup>
@@ -135,6 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_menuprincipal.h" />
+    <ClInclude Include="Hash.h" />
+    <ClInclude Include="IHash.h" />
+    <ClInclude Include="ILista.h" />
+    <ClInclude Include="LDE.h" />
+    <ClInclude Include="Produto.h" />
+    <QtMoc Include="insere_form.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
     <ClInclude Include="LDDE.h" />
   </ItemGroup>
   <ItemGroup>

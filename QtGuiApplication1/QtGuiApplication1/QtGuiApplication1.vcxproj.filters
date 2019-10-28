@@ -39,6 +39,9 @@
     <ClCompile Include="menuprincipal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="insere_form.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication1.h">
@@ -47,12 +50,18 @@
     <QtMoc Include="menuprincipal.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="insere_form.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QtGuiApplication1.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="menuprincipal.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="insere_form.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -66,6 +75,21 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="LDDE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ILista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LDE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Produto.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

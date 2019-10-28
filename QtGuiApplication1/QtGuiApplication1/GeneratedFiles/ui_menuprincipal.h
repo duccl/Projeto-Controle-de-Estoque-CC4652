@@ -16,6 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -27,11 +28,21 @@ public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QFormLayout *formLayout;
-    QProgressBar *porcentagemDoEstoque;
     QLabel *label;
+    QProgressBar *porcentagemDoEstoque;
     QPushButton *botaoInserir;
+    QSpacerItem *horizontalSpacer_2;
     QPushButton *botaoExcluir;
+    QSpacerItem *horizontalSpacer_3;
     QPushButton *botaoConsultar;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *botaoListar;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *botaoVenda;
+    QSpacerItem *horizontalSpacer_5;
+    QPushButton *botaoCompras;
+    QSpacerItem *horizontalSpacer_6;
+    QPushButton *botaoListaDeCompras;
 
     void setupUi(QDialog *menuPrincipal)
     {
@@ -39,7 +50,7 @@ public:
             menuPrincipal->setObjectName(QString::fromUtf8("menuPrincipal"));
         menuPrincipal->setWindowModality(Qt::NonModal);
         menuPrincipal->setEnabled(true);
-        menuPrincipal->resize(403, 296);
+        menuPrincipal->resize(546, 523);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -49,7 +60,7 @@ public:
         menuPrincipal->setModal(true);
         verticalLayoutWidget = new QWidget(menuPrincipal);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(20, 10, 359, 259));
+        verticalLayoutWidget->setGeometry(QRect(10, 10, 521, 424));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -58,12 +69,6 @@ public:
         formLayout = new QFormLayout();
         formLayout->setSpacing(6);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        porcentagemDoEstoque = new QProgressBar(verticalLayoutWidget);
-        porcentagemDoEstoque->setObjectName(QString::fromUtf8("porcentagemDoEstoque"));
-        porcentagemDoEstoque->setValue(0);
-
-        formLayout->setWidget(2, QFormLayout::LabelRole, porcentagemDoEstoque);
-
         label = new QLabel(verticalLayoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QFont font;
@@ -71,6 +76,12 @@ public:
         label->setFont(font);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label);
+
+        porcentagemDoEstoque = new QProgressBar(verticalLayoutWidget);
+        porcentagemDoEstoque->setObjectName(QString::fromUtf8("porcentagemDoEstoque"));
+        porcentagemDoEstoque->setValue(0);
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, porcentagemDoEstoque);
 
 
         verticalLayout->addLayout(formLayout);
@@ -80,15 +91,59 @@ public:
 
         verticalLayout->addWidget(botaoInserir);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout->addItem(horizontalSpacer_2);
+
         botaoExcluir = new QPushButton(verticalLayoutWidget);
         botaoExcluir->setObjectName(QString::fromUtf8("botaoExcluir"));
 
         verticalLayout->addWidget(botaoExcluir);
 
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout->addItem(horizontalSpacer_3);
+
         botaoConsultar = new QPushButton(verticalLayoutWidget);
         botaoConsultar->setObjectName(QString::fromUtf8("botaoConsultar"));
 
         verticalLayout->addWidget(botaoConsultar);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout->addItem(horizontalSpacer_4);
+
+        botaoListar = new QPushButton(verticalLayoutWidget);
+        botaoListar->setObjectName(QString::fromUtf8("botaoListar"));
+
+        verticalLayout->addWidget(botaoListar);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout->addItem(horizontalSpacer);
+
+        botaoVenda = new QPushButton(verticalLayoutWidget);
+        botaoVenda->setObjectName(QString::fromUtf8("botaoVenda"));
+
+        verticalLayout->addWidget(botaoVenda);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout->addItem(horizontalSpacer_5);
+
+        botaoCompras = new QPushButton(verticalLayoutWidget);
+        botaoCompras->setObjectName(QString::fromUtf8("botaoCompras"));
+
+        verticalLayout->addWidget(botaoCompras);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout->addItem(horizontalSpacer_6);
+
+        botaoListaDeCompras = new QPushButton(verticalLayoutWidget);
+        botaoListaDeCompras->setObjectName(QString::fromUtf8("botaoListaDeCompras"));
+
+        verticalLayout->addWidget(botaoListaDeCompras);
 
 
         retranslateUi(menuPrincipal);
@@ -100,9 +155,13 @@ public:
     {
         menuPrincipal->setWindowTitle(QApplication::translate("menuPrincipal", "menuPrincipal", nullptr));
         label->setText(QApplication::translate("menuPrincipal", "Porcentagem ocupada do estoque", nullptr));
-        botaoInserir->setText(QApplication::translate("menuPrincipal", "Inserir", nullptr));
-        botaoExcluir->setText(QApplication::translate("menuPrincipal", "Excluir", nullptr));
-        botaoConsultar->setText(QApplication::translate("menuPrincipal", "Consultar", nullptr));
+        botaoInserir->setText(QApplication::translate("menuPrincipal", "Inserir Novo Produto", nullptr));
+        botaoExcluir->setText(QApplication::translate("menuPrincipal", "Excluir Produto", nullptr));
+        botaoConsultar->setText(QApplication::translate("menuPrincipal", "Consultar Produtos", nullptr));
+        botaoListar->setText(QApplication::translate("menuPrincipal", "Listar Produtos", nullptr));
+        botaoVenda->setText(QApplication::translate("menuPrincipal", "Cadastrar Venda", nullptr));
+        botaoCompras->setText(QApplication::translate("menuPrincipal", "Cadastrar Compra", nullptr));
+        botaoListaDeCompras->setText(QApplication::translate("menuPrincipal", "Lista de Compras", nullptr));
     } // retranslateUi
 
 };

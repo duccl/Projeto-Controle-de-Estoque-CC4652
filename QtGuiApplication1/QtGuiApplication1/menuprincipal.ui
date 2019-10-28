@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>403</width>
-    <height>296</height>
+    <width>546</width>
+    <height>523</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -34,22 +34,15 @@
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>10</y>
-     <width>359</width>
-     <height>259</height>
+     <width>521</width>
+     <height>424</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QFormLayout" name="formLayout">
-      <item row="2" column="0">
-       <widget class="QProgressBar" name="porcentagemDoEstoque">
-        <property name="value">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label">
         <property name="font">
@@ -62,26 +55,139 @@
         </property>
        </widget>
       </item>
+      <item row="2" column="0">
+       <widget class="QProgressBar" name="porcentagemDoEstoque">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
      <widget class="QPushButton" name="botaoInserir">
       <property name="text">
-       <string>Inserir</string>
+       <string>Inserir Novo Produto</string>
       </property>
      </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
     <item>
      <widget class="QPushButton" name="botaoExcluir">
       <property name="text">
-       <string>Excluir</string>
+       <string>Excluir Produto</string>
       </property>
      </widget>
     </item>
     <item>
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
      <widget class="QPushButton" name="botaoConsultar">
       <property name="text">
-       <string>Consultar</string>
+       <string>Consultar Produtos</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botaoListar">
+      <property name="text">
+       <string>Listar Produtos</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botaoVenda">
+      <property name="text">
+       <string>Cadastrar Venda</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botaoCompras">
+      <property name="text">
+       <string>Cadastrar Compra</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_6">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botaoListaDeCompras">
+      <property name="text">
+       <string>Lista de Compras</string>
       </property>
      </widget>
     </item>

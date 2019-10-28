@@ -1,19 +1,41 @@
 #include "menuprincipal.h"
 #include <QMessageBox>
+#include "insere_form.h"
 
 
 menuPrincipal::menuPrincipal(QWidget *parent)
 	: QDialog(parent)
 {
-	setupUi(this);
+	ui.setupUi(this);
+
 }
 menuPrincipal::~menuPrincipal(){}
 
-int menuPrincipal::on_botaoInserir_clicked() {
-	int valor = menuPrincipal::porcentagemDoEstoque->value();
-	valor = (valor + 1) % menuPrincipal::porcentagemDoEstoque->maximum();
-	menuPrincipal::porcentagemDoEstoque->setValue(valor);
-	return 1;
+void menuPrincipal::on_botaoInserir_clicked() {
+	insere_form teste(this);
+	teste.produtos = this->produtos;
+	teste.exec();	
+}
+
+
+void menuPrincipal::on_botaoListar_clicked() {
+	
+}
+
+void menuPrincipal::on_botaoConsultar_clicked() {
+	
+}
+
+void menuPrincipal::on_botaoExcluir_clicked() {
+	
+}
+
+void menuPrincipal::on_botaoCompras_clicked() {
+	
+}
+
+void menuPrincipal::on_botaoVenda_clicked() {
+	
 }
 
 

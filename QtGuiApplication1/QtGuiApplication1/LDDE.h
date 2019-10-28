@@ -1,108 +1,46 @@
+#pragma once
 #include <chrono>
 #include <iostream>
-#include<fstream>
+#include<string>
+#include "Produto.h"
+#include "ILista.h"
 using namespace std;
 
-template <typename T>
-class ILista {
-public:
-	virtual bool Insere(T,T) = 0;
-	virtual int Busca(T,T) = 0;
-	virtual bool Remove(int) = 0;
-	virtual void Imprime() = 0;
-	virtual ~ILista() {};
-};
+
 
 // Pré-declarações
 template <typename T>
 class LDDE;
 
-// Pré-declarações
-template <typename T>
-ostream& operator<< (ostream& out, const LDDE<T>& a);
-
 // Implementações
 template <typename T>
-class No {
+class NoLDDE {
 private:
-	string senha;
-	string user;
-	No<T>* proximo;
-	No<T>* anterior;
+	Produto produto;
+	NoLDDE<T>* proximo;
+	NoLDDE<T>* anterior;
 
 public:
 
-	No() {};
-
-	No(string senha, string user) {
-		this->senha = senha;
-		this->user = user;
+	NoLDDE() {
 		proximo = NULL;
 		anterior = NULL;
-		valor = 0;
 	}
-	// implementa << no nó
 
 	// LDDE pode ver membros privados
 	template <typename>
 	friend class LDDE;
-
-
-	// Operador << do cout com lde pode ver membros privados
 };
 
 template <typename T>
 class LDDE : public ILista<T> {
 private:
-	No<T>* primeiro;
-	No<T>* ultimo;
+	NoLDDE<T>* primeiro;
+	NoLDDE<T>* ultimo;
 	int size;
 	T sentinela;
 
-	void fill_me_in(string endereco_arquivo) {
-		fstream file;
-		string linha;
-		string* vetor;
-		
-		file.open(endereco_arquivo);
-		if (file.is_open()) {
-			while (file >> linha) {
-				vetor = split(linha);
-				this->Insere(vetor[0], vetor[1]);
-			}
-		}
-		else {
-			cout << "erro na abertura" << endl;
-		}
-	}
-
-
-	string* split(string texto) {
-
-		
-		int posicao_delimitador = texto.find(';');
-		int tamanho_vetor = texto.length() / posicao_delimitador;
-
-		string* novo_vetor = new string[(texto.length() / posicao_delimitador)+1];
-
-		int posicao = 0;
-		for (int i = 0; i < texto.length(); i++) {
-			if (i != posicao_delimitador) {
-				novo_vetor[posicao].append(1, texto[i]);
-			}
-			else {
-				posicao++;
-			}
-		}
-		return novo_vetor;
-	}
-
 public:
-
-	void get_fill(string endereco_arquivo) {
-		fill_me_in(endereco_arquivo);
-	}
-
 	LDDE() {
 		primeiro = NULL;
 		ultimo = NULL;
@@ -117,32 +55,28 @@ public:
 	LDDE(const LDDE& outra) {
 	}
 
+	int get_size() {
+		return size;
+	}
+
 	// Este operador faz a cópia da lista em caso de atribuições
 	LDDE& operator= (const LDDE& other) {
 	}
 
-	void Imprime() {
-		No<T>* atual = primeiro;
-		while (atual) {
-			cout << atual->user << " " << atual->senha << endl;
-			atual = atual->proximo;
-		}
-	}
-	bool Insere(T user, T senha) {
+	bool Insere(T p) {
 		bool retorno = false;
 
-		No<T>* novo = new No<T>;
+		NoLDDE<T>* novo = new NoLDDE<T>;
 
-		novo->senha = senha;
-		novo->user = user;
+		novo->produto = p;
 
 		novo->proximo = NULL;
 		novo->anterior = NULL;
 
-		No<T>* atual = primeiro;
-		No<T>* anterior = NULL;
+		NoLDDE<T>* atual = primeiro;
+		NoLDDE<T>* anterior = NULL;
 
-		while (atual != NULL && atual->user < user) {
+		while (atual != NULL && atual->produto.get_nome_produto() < p.get_nome_produto()) {
 			anterior = atual;
 			atual = atual->proximo;
 		}
@@ -168,19 +102,37 @@ public:
 		return retorno;
 	};
 
-	int Busca(T user, T senha) {
-		No<T>* atual = primeiro;
+	int Busca(string valor,Produto p) {
+		NoLDDE<T>* atual = primeiro;
 		int pos = 0;
 		while (atual != NULL) {
-			if (atual->user == user && atual->senha == senha) {
+			if (atual->produto.get_nome_produto() == valor) {
+				if (p.get_nome_produto() != "vazio") {
+					atual->produto = p;
+				}
 				return pos;
 			}
 			atual = atual->proximo;
 			pos++;
 		}
 		return -1;
-
 	};
+
+	
+
+
+	Produto get_produto(int pos) {
+		NoLDDE<T>* atual = primeiro;
+		Produto flag;
+		while (atual != NULL && pos--) {
+			atual = atual->proximo;
+		}
+		if (atual) {
+			return atual->produto;
+		}
+		flag.set_nome_produto("vazio");
+		return flag;
+	}
 
 	bool Remove(int idx) {
 
@@ -188,15 +140,14 @@ public:
 			return false;
 		}
 
-		No<T>* atual = NULL;
-		No<T>* anterior = NULL;
+		NoLDDE<T>* atual = NULL;
+		NoLDDE<T>* anterior = NULL;
 		atual = primeiro;
 
 		while (atual != NULL && idx--) {
 			anterior = atual;
 			atual = atual->proximo;
 		}
-		//nao pode anterior-> prox para pos 0
 
 		if (anterior) {
 			anterior->proximo = atual->proximo;
@@ -219,4 +170,20 @@ public:
 		return true;
 
 	};
+
+	string *Imprime() {
+		NoLDDE<T>* atual = primeiro;
+		string* produtos = new string[this->size];
+		int pos = 0;
+		while (atual != NULL) {
+			produtos[pos] = atual->produto.Imprime();
+			atual = atual->proximo;
+			pos++;
+
+		}
+
+		return produtos;
+	};
+
+
 };

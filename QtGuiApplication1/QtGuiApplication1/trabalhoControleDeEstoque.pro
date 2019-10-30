@@ -21,7 +21,8 @@ SOURCES += \
     main.cpp \
     QtGuiApplication1.cpp \
     menuprincipal.cpp \
-    insere_form.cpp 
+    insere_form.cpp \
+    excluir_form.cpp
 
 HEADERS += \
     QtGuiApplication1.h \
@@ -32,12 +33,14 @@ HEADERS += \
     Ilista.h \
     LDDE.h \
     LDE.h \
-    Produto.h
+    Produto.h \
+    excluir_form.h
 
 FORMS += \
     QtGuiApplication1.ui \
     menuprincipal.ui \
-    insere_form.ui
+    insere_form.ui \
+    excluir_form.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

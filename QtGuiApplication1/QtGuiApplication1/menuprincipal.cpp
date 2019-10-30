@@ -1,6 +1,7 @@
 #include "menuprincipal.h"
 #include <QMessageBox>
 #include "insere_form.h"
+#include "excluir_form.h"
 
 
 menuPrincipal::menuPrincipal(QWidget *parent)
@@ -27,7 +28,8 @@ void menuPrincipal::on_botaoConsultar_clicked() {
 }
 
 void menuPrincipal::on_botaoExcluir_clicked() {
-	
+    excluir_form excluir(this, this->produtos);
+    excluir.exec();
 }
 
 void menuPrincipal::on_botaoCompras_clicked() {

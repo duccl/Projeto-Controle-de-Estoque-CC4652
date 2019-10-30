@@ -14,7 +14,7 @@ menuPrincipal::~menuPrincipal(){}
 void menuPrincipal::on_botaoInserir_clicked() {
 	insere_form teste(this);
 	teste.produtos = this->produtos;
-	teste.exec();	
+    teste.exec();
 }
 
 

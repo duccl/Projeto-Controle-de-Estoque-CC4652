@@ -6,34 +6,34 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG139332 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-$SG144405 DB	'%s', 00H
+$SG139331 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
+$SG144404 DB	'%s', 00H
 	ORG $+9
-$SG139333 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG139332 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG139334 DB	'qRegisterNormalizedMetaType', 00H
+$SG139333 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG142545 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
+$SG142544 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
 	ORG $+12
-$SG142546 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG142545 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG142547 DB	'qRegisterNormalizedMetaType', 00H
+$SG142546 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG142884 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
+$SG142883 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
 	ORG $+12
-$SG142885 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG142884 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG142886 DB	'qRegisterNormalizedMetaType', 00H
+$SG142885 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG143223 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
+$SG143222 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
 	ORG $+12
-$SG143224 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG143223 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG143225 DB	'qRegisterNormalizedMetaType', 00H
+$SG143224 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_QtGuiApplication1@@3Uqt_meta_stringdata_QtGuiApplication1_t@@B DD 0ffffffffH ; qt_meta_stringdata_QtGuiApplication1
 	DD	011H
@@ -115,19 +115,19 @@ $SG143225 DB	'qRegisterNormalizedMetaType', 00H
 	DD	02bH
 	DD	00H
 	ORG $+4
-$SG144053 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
+$SG144052 DB	'C:\Qt\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
 	ORG $+4
-$SG144054 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG144053 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG144055 DB	'qRegisterNormalizedMetaType', 00H
+$SG144054 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG144404 DB	'invalid argument', 00H
+$SG144403 DB	'invalid argument', 00H
 	ORG $+15
-$SG144406 DB	'C:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\'
+$SG144405 DB	'C:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\'
 	DB	'14.23.28105\include\xmemory', 00H
 	ORG $+12
-$SG144407 DB	'C', 00H, ':', 00H, '\', 00H, 'M', 00H, 'i', 00H, 'c', 00H
+$SG144406 DB	'C', 00H, ':', 00H, '\', 00H, 'M', 00H, 'i', 00H, 'c', 00H
 	DB	'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't', 00H, ' '
 	DB	00H, 'V', 00H, 'i', 00H, 's', 00H, 'u', 00H, 'a', 00H, 'l', 00H
 	DB	' ', 00H, 'S', 00H, 't', 00H, 'u', 00H, 'd', 00H, 'i', 00H, 'o'
@@ -141,7 +141,7 @@ $SG144407 DB	'C', 00H, ':', 00H, '\', 00H, 'M', 00H, 'i', 00H, 'c', 00H
 	DB	'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x', 00H, 'm'
 	DB	00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H, 00H, 00H
 	ORG $+8
-$SG144408 DB	's', 00H, 't', 00H, 'd', 00H, ':', 00H, ':', 00H, '_', 00H
+$SG144407 DB	's', 00H, 't', 00H, 'd', 00H, ':', 00H, ':', 00H, '_', 00H
 	DB	'A', 00H, 'l', 00H, 'l', 00H, 'o', 00H, 'c', 00H, 'a', 00H, 't'
 	DB	00H, 'e', 00H, '_', 00H, 'm', 00H, 'a', 00H, 'n', 00H, 'u', 00H
 	DB	'a', 00H, 'l', 00H, 'l', 00H, 'y', 00H, '_', 00H, 'v', 00H, 'e'
@@ -149,11 +149,11 @@ $SG144408 DB	's', 00H, 't', 00H, 'd', 00H, ':', 00H, ':', 00H, '_', 00H
 	DB	'l', 00H, 'i', 00H, 'g', 00H, 'n', 00H, 'e', 00H, 'd', 00H, 00H
 	DB	00H
 	ORG $+2
-$SG144409 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG144408 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+10
-$SG144520 DB	'C:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\'
+$SG144519 DB	'C:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\'
 	DB	'14.23.28105\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
@@ -629,7 +629,7 @@ _TEXT	ENDS
 ;	COMDAT ??__E?staticMetaObject@QtGuiApplication1@@2UQMetaObject@@B@@YAXXZ
 text$di	SEGMENT
 ??__E?staticMetaObject@QtGuiApplication1@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'QtGuiApplication1::staticMetaObject'', COMDAT
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 80
 	mov	rax, QWORD PTR __imp_?staticMetaObject@QMainWindow@@2UQMetaObject@@B
 	mov	QWORD PTR ?staticMetaObject@QtGuiApplication1@@2UQMetaObject@@B, rax
@@ -658,7 +658,7 @@ _c$ = 72
 _id$ = 80
 _a$ = 88
 ?qt_static_metacall@QtGuiApplication1@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; QtGuiApplication1::qt_static_metacall
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 67
 $LN8:
 	mov	QWORD PTR [rsp+32], r9
@@ -696,7 +696,7 @@ _c$ = 56
 _id$ = 64
 _a$ = 72
 ?qt_metacall@QtGuiApplication1@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; QtGuiApplication1::qt_metacall
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 103
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
@@ -769,7 +769,7 @@ _TEXT	SEGMENT
 this$ = 48
 _clname$ = 56
 ?qt_metacast@QtGuiApplication1@@UEAAPEAXPEBD@Z PROC	; QtGuiApplication1::qt_metacast
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 95
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
@@ -806,7 +806,7 @@ _TEXT	SEGMENT
 tv82 = 32
 this$ = 64
 ?metaObject@QtGuiApplication1@@UEBAPEBUQMetaObject@@XZ PROC ; QtGuiApplication1::metaObject
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 90
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
@@ -1352,7 +1352,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 120
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
@@ -1364,7 +1364,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
-; File C:\Users\ecoltri\Desktop\teste\Projeto-Controle-de-Estoque-CC4652\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
+; File C:\Users\ecoltri\source\repos\QtGuiApplication1\QtGuiApplication1\GeneratedFiles\Debug\moc_QtGuiApplication1.cpp
 ; Line 120
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0

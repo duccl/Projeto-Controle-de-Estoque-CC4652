@@ -15,12 +15,8 @@ public:
 	QtGuiApplication1(QWidget *parent = Q_NULLPTR);
 
 private:
-	Ui::QtGuiApplication1Class ui;
+    Ui::QtGuiApplication1Class ui;
 	LDE<string> users;
-
-	void init() {
-		users.get_fill("bd.txt");
-	}
 
 protected slots:
 	void on_botaoLogin_clicked();

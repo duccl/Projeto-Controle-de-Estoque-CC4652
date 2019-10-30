@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include<string>
-#include <fstream>
+#include <QFile>
+#include <QTextStream>
+
 using namespace std;
 
 //LDE Implementation
@@ -38,30 +40,27 @@ private:
 	No<T>* primeiro;
 	int size;
 
-	void fill_me_in(string endereco_arquivo) {
-		fstream file;
-		string linha;
-		string* vetor;
+    void fill_me_in() {
+        QFile file(":/QtGuiApplication1/bd.txt");
+        string* vetor;
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+            QTextStream in(&file);
+            while(!in.atEnd()){
+                  QString linha = in.readLine();
+                  string cast_linha = linha.toUtf8().constData();
+                  vetor = split(cast_linha);
+                  this->insere(vetor[0], vetor[1]);
+            }
+        }
+        else{
+           cout << "erro na abertura" << endl;
+        }
 
-		file.open(endereco_arquivo);
-		if (file.is_open()) {
-			while (file >> linha) {
-				vetor = split(linha);
-				this->insere(vetor[0], vetor[1]);
-			}
-		}
-		else {
-			cout << "erro na abertura" << endl;
-		}
-	}
+    }
 
 
 	string* split(string texto) {
-
-
 		int posicao_delimitador = texto.find(';');
-		int tamanho_vetor = texto.length() / posicao_delimitador;
-
 		string* novo_vetor = new string[(texto.length() / posicao_delimitador) + 1];
 
 		int posicao = 0;
@@ -78,10 +77,6 @@ private:
 
 public:
 
-	void get_fill(string endereco_arquivo) {
-		fill_me_in(endereco_arquivo);
-	}
-
 	~LDE() {
 		while (this->remove(0));
 		delete primeiro;
@@ -90,17 +85,8 @@ public:
 	LDE() {
 		primeiro = NULL;
 		size = 0;
+        this->fill_me_in();
 	}
-
-	/*void print() {
-		No<T>* atual = primeiro;
-		cout << "LDE: ";
-		while (atual != NULL) {
-			cout << atual->valor << " ";
-			atual = atual->prox;
-		}
-		cout << endl;
-	}*/
 
 	bool remove(int idx) {
 		if (idx > size || primeiro == NULL) {

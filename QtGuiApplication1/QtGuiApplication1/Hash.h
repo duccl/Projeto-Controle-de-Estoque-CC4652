@@ -11,7 +11,7 @@ private:
 	int tamanho;
 	int limite;
 
-	int soma_de_chars(string& str) {
+    int soma_de_chars(const string& str) {
 		if (str.empty()) {
 			return -1;
 		}
@@ -23,7 +23,7 @@ private:
 		return value;
 	}
 
-	int funcaoHash(string& str) {
+    int funcaoHash(const string& str) {
 		return soma_de_chars(str) % tamanho;
 	}
 public:

@@ -3,10 +3,11 @@
 #include "Produto.h"
 #include <QDebug>
 
-insere_form::insere_form(QWidget *parent)
+insere_form::insere_form(QWidget *parent,Hash<Produto>* produtos)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
+    this->produtos = produtos;
 }
 
 void insere_form::on_botaoCadastra_clicked() {

@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include "insere_form.h"
 #include "excluir_form.h"
+#include "listar_form.h"
 
 
 menuPrincipal::menuPrincipal(QWidget *parent)
@@ -13,14 +14,15 @@ menuPrincipal::menuPrincipal(QWidget *parent)
 menuPrincipal::~menuPrincipal(){}
 
 void menuPrincipal::on_botaoInserir_clicked() {
-	insere_form teste(this);
-	teste.produtos = this->produtos;
+    insere_form teste(this,this->produtos);
     teste.exec();
 }
 
 
 void menuPrincipal::on_botaoListar_clicked() {
-	
+    QString lista = QString::fromStdString(this->produtos->Imprime());
+    listar_form listador(this,lista);
+    listador.exec();
 }
 
 void menuPrincipal::on_botaoConsultar_clicked() {

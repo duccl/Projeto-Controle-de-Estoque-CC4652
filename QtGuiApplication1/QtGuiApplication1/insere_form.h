@@ -10,7 +10,7 @@ class insere_form : public QDialog
 	Q_OBJECT
 
 public:
-	insere_form(QWidget *parent);
+    insere_form(QWidget *parent,Hash<Produto>* produtos);
 	~insere_form();
 	Hash<Produto>* produtos;
 

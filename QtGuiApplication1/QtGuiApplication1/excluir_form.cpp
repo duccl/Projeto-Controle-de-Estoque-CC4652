@@ -1,7 +1,7 @@
 #include "excluir_form.h"
 #include "Produto.h"
 #include "Hash.h"
-excluir_form::excluir_form(QWidget *parent, Hash<Produto>*& hash)
+excluir_form::excluir_form(QWidget *parent, Hash<Produto>* hash)
 	: QDialog(parent)
 {
 	ui.setupUi(this);

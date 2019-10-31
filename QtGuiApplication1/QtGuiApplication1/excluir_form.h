@@ -10,7 +10,7 @@ class excluir_form : public QDialog
 	Q_OBJECT
 
 public:
-	excluir_form(QWidget *parent, Hash<Produto>*& hash);
+    excluir_form(QWidget *parent, Hash<Produto> *hash);
 	~excluir_form();
 	Hash<Produto>* produtos;
 

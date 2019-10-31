@@ -3,7 +3,7 @@
 #include "insere_form.h"
 #include "excluir_form.h"
 #include "listar_form.h"
-
+#include "consulta_form.h"
 
 menuPrincipal::menuPrincipal(QWidget *parent)
 	: QDialog(parent)
@@ -26,7 +26,8 @@ void menuPrincipal::on_botaoListar_clicked() {
 }
 
 void menuPrincipal::on_botaoConsultar_clicked() {
-	
+    consulta_form consulta(this, this->produtos);
+    consulta.exec();
 }
 
 void menuPrincipal::on_botaoExcluir_clicked() {

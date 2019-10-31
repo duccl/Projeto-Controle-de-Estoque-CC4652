@@ -121,7 +121,7 @@ public:
 	
 
 
-	Produto get_produto(int pos) {
+    T& get_produto(int pos) {
 		NoLDDE<T>* atual = primeiro;
 		Produto flag;
 		while (atual != NULL && pos--) {

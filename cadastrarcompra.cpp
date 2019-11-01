@@ -25,6 +25,8 @@ void cadastrarCompra::on_botaoConsulta_clicked() {
 		ui.novaQuantidade->setEnabled(true);
 	}
 	else {
+        ui.botaoUpdate->setEnabled(false);
+        ui.novaQuantidade->setEnabled(false);
 		ui.retornoProduto->setText("<font color='red' size = 4>Produto nao foi encontrado!</font>");
 	}
 }

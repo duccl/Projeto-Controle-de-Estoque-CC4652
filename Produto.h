@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include<iostream>
 using namespace std;
 
 
@@ -9,7 +10,7 @@ private:
 	int quantidade_atual;
 	int tamanho;
 	int quantidade_minima;
-	double preco;
+    float preco;
 
 	
 public:
@@ -20,8 +21,8 @@ public:
 	}
 
 	Produto() {
-		nome_produto = "vazio";
-	};
+        this->nome_produto = "vazio";
+    }
 
 	Produto(string nome, int quantidade_atual,int tamanho,int quantidade_minima,double preco) {
 		this->quantidade_atual = quantidade_atual;
@@ -38,11 +39,11 @@ public:
 	Produto& operator =(Produto& p) {
 		if (this == &p) {
 			return *this;
-		}
-		nome_produto = p.nome_produto;
-		quantidade_atual = p.quantidade_atual;
-		quantidade_minima = p.quantidade_minima;
-		tamanho = p.tamanho;
+        }
+        nome_produto = p.nome_produto;
+        quantidade_atual = p.quantidade_atual;
+        quantidade_minima = p.quantidade_minima;
+        tamanho = p.tamanho;
 		preco = p.preco;
 		return *this;
 	}

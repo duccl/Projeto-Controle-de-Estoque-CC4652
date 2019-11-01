@@ -11,6 +11,8 @@ private:
     int tamanho;
     int limite;
 
+    T sentiela;
+
     int soma_de_chars(string str) {
 		if (str.empty()) {
 			return -1;
@@ -42,19 +44,25 @@ public:
 		return true;
 	}
 
-    bool Contem(T& p) {
-        if (hashTable[funcaoHash(p.get_nome_produto())].Busca(p.get_nome_produto(),p) != -1) {
+    bool Contem(T p) {
+        if (hashTable[funcaoHash(p.get_nome_produto())].Busca(p) != -1) {
             return true;
 		}
 		return false;
 	}
 
     int posicao(string nome_produto) {
-        return hashTable[funcaoHash(nome_produto)].Busca(nome_produto,Produto());
+        return hashTable[funcaoHash(nome_produto)].Busca(nome_produto);
 	}
 
     T& Contem(string nome_produto) {
-        return hashTable[funcaoHash(nome_produto)].get_produto(posicao(nome_produto));
+        int posicao_produto = posicao(nome_produto);
+        if(posicao_produto != -1){
+            return hashTable[funcaoHash(nome_produto)].get_produto(posicao_produto);
+        }
+        else{
+            return this->sentiela;
+        }
 	}
 
     string Imprime() {
@@ -68,8 +76,9 @@ public:
 	}
 
     bool Remove(string nome_produto) {
-		if (Contem(nome_produto).get_nome_produto() != "vazio") {
-			hashTable[funcaoHash(nome_produto)].Remove(posicao(nome_produto));
+        int posicao_produto = posicao(nome_produto);
+        if (posicao_produto != -1) {
+            hashTable[funcaoHash(nome_produto)].Remove(posicao_produto);
 			return true;
 		}
 		return false;

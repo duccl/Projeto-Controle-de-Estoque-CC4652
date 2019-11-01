@@ -36,7 +36,7 @@ void menuPrincipal::on_botaoExcluir_clicked() {
 }
 
 void menuPrincipal::on_botaoCompras_clicked() {
-	
+
 }
 
 void menuPrincipal::on_botaoVenda_clicked() {

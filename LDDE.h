@@ -8,15 +8,15 @@ using namespace std;
 
 
 
-// Pré-declarações
+
 template <typename T>
 class LDDE;
 
-// Implementações
+
 template <typename T>
 class NoLDDE {
 private:
-	Produto produto;
+    T produto;
 	NoLDDE<T>* proximo;
 	NoLDDE<T>* anterior;
 
@@ -59,7 +59,6 @@ public:
 		return size;
 	}
 
-	// Este operador faz a cópia da lista em caso de atribuições
 	LDDE& operator= (const LDDE& other) {
 	}
 
@@ -100,38 +99,44 @@ public:
 
 		size++;
 		return retorno;
-	};
+    }
 
-	int Busca(string valor,Produto p) {
+    int Busca(T valor) {
 		NoLDDE<T>* atual = primeiro;
 		int pos = 0;
 		while (atual != NULL) {
-			if (atual->produto.get_nome_produto() == valor) {
-				if (p.get_nome_produto() != "vazio") {
-					atual->produto = p;
-				}
+            if (atual->produto.get_nome_produto() == valor.get_nome_produto()) {
 				return pos;
 			}
 			atual = atual->proximo;
 			pos++;
 		}
 		return -1;
-	};
+    }
 
+    int Busca(string valor) {
+        NoLDDE<T>* atual = primeiro;
+        int pos = 0;
+        while (atual != NULL) {
+            if (atual->produto.get_nome_produto() == valor) {
+                return pos;
+            }
+            atual = atual->proximo;
+            pos++;
+        }
+        return -1;
+    }
 	
-
-
     T& get_produto(int pos) {
 		NoLDDE<T>* atual = primeiro;
-		Produto flag;
 		while (atual != NULL && pos--) {
 			atual = atual->proximo;
 		}
 		if (atual) {
 			return atual->produto;
-		}
-		flag.set_nome_produto("vazio");
-		return flag;
+        }
+        sentinela.set_nome_produto("vazio");
+        return sentinela;
 	}
 
 	bool Remove(int idx) {
@@ -169,7 +174,7 @@ public:
 		size--;
 		return true;
 
-	};
+    }
 
 	string *Imprime() {
 		NoLDDE<T>* atual = primeiro;

@@ -19,7 +19,7 @@ public:
 	virtual bool remove(int) = 0;
 	virtual ~InterfaceLista() {
 
-	};
+    }
 
 };
 
@@ -32,6 +32,7 @@ private:
 	T senha, user;
 	No<T>* prox;
 	friend class LDE<T>;
+
 };
 
 template <typename T>
@@ -39,17 +40,39 @@ class LDE : InterfaceLista<T> {
 private:
 	No<T>* primeiro;
 	int size;
+    string* vetor_de_strings;
 
-    void fill_me_in() {
+    void split(string texto) {
+        int posicao_delimitador = texto.find(';');
+        vetor_de_strings = new string[(texto.length() / posicao_delimitador) + 1];
+
+        int posicao = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            if (i != posicao_delimitador) {
+                vetor_de_strings[posicao].append(1, texto[i]);
+            }
+            else {
+                posicao++;
+            }
+        }
+    }
+
+    void ler_linha(QString linha){
+        string cast_linha = linha.toUtf8().constData();
+
+        split(cast_linha);
+
+        this->insere(vetor_de_strings[0], vetor_de_strings[1]);
+
+        delete[] vetor_de_strings;
+    }
+
+    void le_arquivo() {
         QFile file(":/QtGuiApplication1/bd.txt");
-        string* vetor;
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QTextStream in(&file);
             while(!in.atEnd()){
-                  QString linha = in.readLine();
-                  string cast_linha = linha.toUtf8().constData();
-                  vetor = split(cast_linha);
-                  this->insere(vetor[0], vetor[1]);
+                  ler_linha(in.readLine());
             }
         }
         else{
@@ -57,23 +80,6 @@ private:
         }
 
     }
-
-
-	string* split(string texto) {
-		int posicao_delimitador = texto.find(';');
-		string* novo_vetor = new string[(texto.length() / posicao_delimitador) + 1];
-
-		int posicao = 0;
-		for (int i = 0; i < texto.length(); i++) {
-			if (i != posicao_delimitador) {
-				novo_vetor[posicao].append(1, texto[i]);
-			}
-			else {
-				posicao++;
-			}
-		}
-		return novo_vetor;
-	}
 
 public:
 
@@ -85,7 +91,7 @@ public:
 	LDE() {
 		primeiro = NULL;
 		size = 0;
-        this->fill_me_in();
+        this->le_arquivo();
 	}
 
 	bool remove(int idx) {

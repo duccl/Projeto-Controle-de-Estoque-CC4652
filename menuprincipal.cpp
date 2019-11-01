@@ -4,6 +4,7 @@
 #include "excluir_form.h"
 #include "listar_form.h"
 #include "consulta_form.h"
+#include "cadastrarcompra.h"
 
 menuPrincipal::menuPrincipal(QWidget *parent)
 	: QDialog(parent)
@@ -36,7 +37,8 @@ void menuPrincipal::on_botaoExcluir_clicked() {
 }
 
 void menuPrincipal::on_botaoCompras_clicked() {
-
+    cadastrarCompra compra(this, this->produtos);
+    compra.exec();
 }
 
 void menuPrincipal::on_botaoVenda_clicked() {

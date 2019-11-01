@@ -24,7 +24,8 @@ SOURCES += \
     insere_form.cpp \
     excluir_form.cpp \
     listar_form.cpp \
-    consulta_form.cpp
+    consulta_form.cpp \
+    cadastrarcompra.cpp
 
 HEADERS += \
     QtGuiApplication1.h \
@@ -38,7 +39,8 @@ HEADERS += \
     Produto.h \
     excluir_form.h \
     listar_form.h \
-    consulta_form.h
+    consulta_form.h \
+    cadastrarcompra.h
 
 FORMS += \
     QtGuiApplication1.ui \
@@ -46,7 +48,8 @@ FORMS += \
     insere_form.ui \
     excluir_form.ui \
     listar_form.ui \
-    consulta_form.ui
+    consulta_form.ui \
+    cadastrarcompra.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

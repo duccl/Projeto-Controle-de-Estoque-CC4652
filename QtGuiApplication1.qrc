@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/QtGuiApplication1">
+        <file>bd.txt</file>
+    </qresource>
+</RCC>
+

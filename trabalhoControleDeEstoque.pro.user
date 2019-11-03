@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.10.1, 2019-11-01T14:02:55. -->
+<!-- Written by QtCreator 4.10.1, 2019-11-01T20:16:38. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -306,8 +306,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">trabalhoControleDeEstoque</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/ecoltri/Downloads/Projeto-Controle-de-Estoque-CC4652-duccl-homologacao_v2 (2)/Projeto-Controle-de-Estoque-CC4652-duccl-homologacao_v2/trabalhoControleDeEstoque.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">trabalhoControleDeEstoque2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/ecoltri/Desktop/Projeto-Controle-de-Estoque-CC4652/trabalhoControleDeEstoque.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

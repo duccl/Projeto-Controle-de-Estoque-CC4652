@@ -22,3 +22,11 @@ void QtGuiApplication1::on_botaoLogin_clicked(){
 		ui.label_4->setText("<font color = 'red' size=8> User and/or Password Incorrect </font>");
 	}
 }	
+
+void QtGuiApplication1::on_aboutLogin_clicked(){
+    QMessageBox sobreLogin;
+    sobreLogin.setText("Se voce for admin, para saber usuario e senha deve olhar o arquivo bd.txt."
+                       "O padrao é user;senha no arquivo.");
+    sobreLogin.setWindowTitle("About");
+    sobreLogin.exec();
+}

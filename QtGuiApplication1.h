@@ -20,4 +20,5 @@ private:
 
 protected slots:
 	void on_botaoLogin_clicked();
+    void on_aboutLogin_clicked();
 };

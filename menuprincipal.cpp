@@ -6,6 +6,7 @@
 #include "consulta_form.h"
 #include "cadastrarcompra.h"
 #include "listadecompras.h"
+#include "cadastrarvenda.h"
 #include "LES_v2.h"
 
 menuPrincipal::menuPrincipal(QWidget *parent)
@@ -44,7 +45,8 @@ void menuPrincipal::on_botaoCompras_clicked() {
 }
 
 void menuPrincipal::on_botaoVenda_clicked() {
-	
+    cadastrarVenda venda(this,this->produtos);
+    venda.exec();
 }
 
 void menuPrincipal::on_botaoListaDeCompras_clicked(){

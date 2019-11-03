@@ -3,7 +3,7 @@
 #include "Produto.h"
 #include <QMessageBox>
 
-cadastrarVenda::cadastrarVenda(QWidget *parent, Hash<Produto>*& produtos)
+cadastrarVenda::cadastrarVenda(QWidget *parent, Hash<Produto>* produtos)
 	: QDialog(parent)
 {
 	ui.setupUi(this);

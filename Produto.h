@@ -20,11 +20,15 @@ public:
 		return this->nome_produto != p.nome_produto ? true : false;
 	}
 
+    bool operator <(Produto& p){
+        return this->diferenca_entre_quantidadeAtual_quantidadeMinima() < p.diferenca_entre_quantidadeAtual_quantidadeMinima() ? true : false;
+    }
+
 	Produto() {
         this->nome_produto = "vazio";
     }
 
-	Produto(string nome, int quantidade_atual,int tamanho,int quantidade_minima,double preco) {
+    Produto(string nome, int quantidade_atual,int tamanho,int quantidade_minima,float preco) {
 		this->quantidade_atual = quantidade_atual;
 		this->quantidade_minima = quantidade_minima;
 		nome_produto = nome;
@@ -77,15 +81,20 @@ public:
 		return quantidade_minima;
 	}
 
-	double getPreco() {
+    float getPreco() {
 		return preco;
 	}
+
+    int diferenca_entre_quantidadeAtual_quantidadeMinima(){
+        return quantidade_atual - quantidade_minima;
+    }
 
 	string Imprime() {
 		return ("Nome do Produto: " + get_nome_produto() + "\n" +
 			"Quantidade Atual: " + to_string(get_quantidade_atual()) + "\n"
 			+"Preco: " + to_string(preco) + "\n" +
-			"Tamanho " + to_string(get_tamanho()) + 
+            "Tamanho " + to_string(get_tamanho()) + "\n"
+            "Quantidade Minima: " + to_string(this->quantidade_minima) +
 			"\n----------------------------\n");
 	}
 };

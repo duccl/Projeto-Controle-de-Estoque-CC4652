@@ -2,7 +2,7 @@
 #include "Hash.h"
 #include "Produto.h"
 
-consulta_form::consulta_form(QWidget *parent, Hash<Produto>*& produtos)
+consulta_form::consulta_form(QWidget *parent, Hash<Produto>* produtos)
 	: QDialog(parent)
 {
 	this->produtos = produtos;

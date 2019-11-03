@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 RESOURCES += QtGuiApplication1.qrc
 
 SOURCES += \
+    listadecompras.cpp \
     main.cpp \
     QtGuiApplication1.cpp \
     menuprincipal.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
 
 HEADERS += \
     QtGuiApplication1.h \
+    listadecompras.h \
     menuprincipal.h \
     insere_form.h \
     Hash.h \
@@ -46,6 +48,7 @@ HEADERS += \
 
 FORMS += \
     QtGuiApplication1.ui \
+    listadecompras.ui \
     menuprincipal.ui \
     insere_form.ui \
     excluir_form.ui \

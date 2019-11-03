@@ -10,7 +10,7 @@ class cadastrarCompra : public QDialog
 	Q_OBJECT
 
 public:
-	cadastrarCompra(QWidget *parent,Hash<Produto>*& produtos);
+    cadastrarCompra(QWidget *parent,Hash<Produto>* produtos);
 	~cadastrarCompra();
 	Hash<Produto>* produtos;
     Produto* temp;

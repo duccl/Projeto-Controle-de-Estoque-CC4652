@@ -3,6 +3,7 @@
 #include "LDDE.h"
 #include "Produto.h"
 #include "IHash.h"
+#include "LES_v2.h"
 using namespace std;
 template<typename T>
 class Hash : public IHash<T> {
@@ -10,6 +11,9 @@ private:
     LDDE<T>* hashTable;
     int tamanho;
     int limite;
+    int quantidade_elementos;
+
+    T insercao_mais_recente;
 
     T sentiela;
 
@@ -33,7 +37,12 @@ public:
         tamanho = new_tamanho;
         limite = 0;
         hashTable = new LDDE<T>[tamanho];
+        quantidade_elementos = 0;
 	}
+
+    int get_size(){
+        return quantidade_elementos;
+    }
 
     bool Insere(T p) {
         if (Contem(p) || limite >= (tamanho + tamanho * 0.5)) {
@@ -41,8 +50,13 @@ public:
 		}
         hashTable[funcaoHash(p.get_nome_produto())].Insere(p);
         limite++;
+        quantidade_elementos++;
 		return true;
 	}
+
+    T get_insercao_mais_recente(){
+        return insercao_mais_recente;
+    }
 
     bool Contem(T p) {
         if (hashTable[funcaoHash(p.get_nome_produto())].Busca(p) != -1) {
@@ -81,8 +95,15 @@ public:
             hashTable[funcaoHash(nome_produto)].Remove(posicao_produto);
 			return true;
 		}
+        quantidade_elementos--;
 		return false;
 	}
+
+    void lista_compras(LES<Produto>*lista_de_compras){
+        for (int i = 0; i < tamanho; ++i) {
+            hashTable[i].update_lista_compras(lista_de_compras);
+        }
+    }
 
 	~Hash() {
 		delete(hashTable);

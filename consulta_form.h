@@ -10,7 +10,7 @@ class consulta_form : public QDialog
 	Q_OBJECT
 
 public:
-	consulta_form(QWidget* parent, Hash<Produto>*& produtos);
+    consulta_form(QWidget* parent, Hash<Produto>* produtos);
 	~consulta_form();
 
 private:

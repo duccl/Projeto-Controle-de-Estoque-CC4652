@@ -2,6 +2,8 @@
 #include "Hash.h"
 #include "Produto.h"
 #include <QDebug>
+#include "menuprincipal.h"
+#include "LES_v2.h"
 
 insere_form::insere_form(QWidget *parent,Hash<Produto>* produtos)
 	: QDialog(parent)
@@ -11,7 +13,6 @@ insere_form::insere_form(QWidget *parent,Hash<Produto>* produtos)
 }
 
 void insere_form::on_botaoCadastra_clicked() {
-
 	if (ui.nomeProduto->text().isEmpty()) {
 		ui.retorno->setText("<font color = 'red' size=5> O NOME NAO PODE ESTAR EM BRANCO</font>");
 		return;

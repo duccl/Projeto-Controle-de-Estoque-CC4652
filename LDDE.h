@@ -4,11 +4,8 @@
 #include<string>
 #include "Produto.h"
 #include "ILista.h"
+#include "LES_v2.h"
 using namespace std;
-
-
-
-
 template <typename T>
 class LDDE;
 
@@ -38,7 +35,7 @@ private:
 	NoLDDE<T>* primeiro;
 	NoLDDE<T>* ultimo;
 	int size;
-	T sentinela;
+    T sentinela;
 
 public:
 	LDDE() {
@@ -176,9 +173,18 @@ public:
 
     }
 
+    void update_lista_compras(LES<Produto>*lista){
+        NoLDDE<T>* atual = primeiro;
+
+        while(atual){
+            lista->insere(atual->produto);
+            atual = atual->proximo;
+        }
+    }
+
 	string *Imprime() {
 		NoLDDE<T>* atual = primeiro;
-		string* produtos = new string[this->size];
+        string* produtos = new string[this->size];
 		int pos = 0;
 		while (atual != NULL) {
 			produtos[pos] = atual->produto.Imprime();
@@ -188,7 +194,10 @@ public:
 		}
 
 		return produtos;
-	};
+    }
 
+    T get_raiz(){
+        return size <= 0 ? sentinela : primeiro->produto;
+    }
 
 };

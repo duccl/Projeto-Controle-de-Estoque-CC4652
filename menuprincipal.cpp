@@ -5,14 +5,15 @@
 #include "listar_form.h"
 #include "consulta_form.h"
 #include "cadastrarcompra.h"
-#include "cadastrarvenda.h"
+#include "listadecompras.h"
+#include "LES_v2.h"
 
 menuPrincipal::menuPrincipal(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-
 }
+
 menuPrincipal::~menuPrincipal(){}
 
 void menuPrincipal::on_botaoInserir_clicked() {
@@ -43,8 +44,19 @@ void menuPrincipal::on_botaoCompras_clicked() {
 }
 
 void menuPrincipal::on_botaoVenda_clicked() {
-    cadastrarVenda venda(this, this->produtos);
-    venda.exec();
+	
+}
+
+void menuPrincipal::on_botaoListaDeCompras_clicked(){
+    LES<Produto>* lista_compras = new LES<Produto>(this->produtos->get_size()+1);
+
+    this->produtos->lista_compras(lista_compras);
+
+    QString compras = QString::fromStdString(lista_compras->print());
+
+    listadecompras minhaLista(this,compras);
+    minhaLista.exec();
+    delete lista_compras;
 }
 
 

@@ -4,7 +4,7 @@
 #include <QMessageBox>
 
 //C:\Users\ecoltri\Downloads\Projeto-Controle-de-Estoque-CC4652-duccl-homologacao_v2 (2)\Projeto-Controle-de-Estoque-CC4652-duccl-homologacao_v2
-cadastrarCompra::cadastrarCompra(QWidget *parent, Hash<Produto>*& produtos)
+cadastrarCompra::cadastrarCompra(QWidget *parent, Hash<Produto>* produtos)
 	: QDialog(parent)
 {
 	ui.setupUi(this);

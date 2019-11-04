@@ -566,6 +566,19 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="aboutLogin">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>270</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Como fazer login</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -576,32 +589,8 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>835</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuTeste">
-    <property name="title">
-     <string>Home</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuSobre">
-    <property name="title">
-     <string>Sobre</string>
-    </property>
-   </widget>
-   <addaction name="menuTeste"/>
-   <addaction name="menuSobre"/>
-  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="QtGuiApplication1.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

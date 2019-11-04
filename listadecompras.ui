@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Lista de compras</string>
   </property>
   <widget class="QTextBrowser" name="saida">
    <property name="geometry">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>10</y>
      <width>461</width>
-     <height>481</height>
+     <height>621</height>
     </rect>
    </property>
   </widget>

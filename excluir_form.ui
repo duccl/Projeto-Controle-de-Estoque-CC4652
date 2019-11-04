@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>excluir_form</string>
+   <string>Excluir Produto</string>
   </property>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">

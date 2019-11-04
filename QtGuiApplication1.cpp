@@ -14,7 +14,7 @@ void QtGuiApplication1::on_botaoLogin_clicked(){
 	string usuario = ui.lineEdit->text().toUtf8().constData();
 	string senha = ui.lineEdit_2->text().toUtf8().constData();
     if (QtGuiApplication1::users.busca(usuario, senha) != -1) {
-		QtGuiApplication1::setVisible(false);
+        ui.label_4->setText("<font color = 'green' size=4>Login efetuado com sucesso!</font>");
 		menuPrincipal menu(this);
 		menu.exec();
 	}

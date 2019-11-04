@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>consulta_form</string>
+   <string>Consulta Produto</string>
   </property>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">

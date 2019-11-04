@@ -30,6 +30,10 @@ void cadastrarVenda::on_botaoConsulta_clicked() {
 
 void cadastrarVenda::on_botaoUpdate_clicked() {
 	int nova_quantidade = ui.novaQuantidade->value();
+    if(nova_quantidade > this->temp->get_quantidade_atual()){
+        ui.retornoProduto->setText("<font color='red' size = 3>Quantidade vendida não pode ser maior que quantidade atual!</font>");
+        return;
+    }
     this->temp->set_quantidade_atual(nova_quantidade*-1);
 	ui.retornoProduto->setText("<font color='green' size = 4>Quantidade atualizada</font>");
 }
